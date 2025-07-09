@@ -307,8 +307,8 @@
       //
       let x: i8 = 0;
       {
-          let x: f32 = 1.0;
-          println!("{:?}", x);
+        let x: f32 = 1.0;
+        println!("{:?}", x);
       }
       println!("{:?}", x);
   }
@@ -339,10 +339,9 @@
       //
       let x = 5;
       let x = x + 1;
-
       {
-          let x = x * 2;
-          println!("The inner value of x is: {}", x);
+        let x = x * 2;
+        println!("The inner value of x is: {}", x);
       }
 
       println!("The outer value of x is: {}", x);
@@ -354,10 +353,10 @@
 
   ```rust
   let a = 10;
-    {
-      let b = 20;
-      println!("Inside the block: a = {}, b = {}", a, b);
-    }
+  {
+    let b = 20;
+    println!("Inside the block: a = {}, b = {}", a, b);
+  }
   
   // println!("Outside the block: a = {}, b = {}", a, b);
   println!("Outside the block: a = {}", a);
@@ -373,8 +372,8 @@
       //
       let a = 10;
       {
-          let b = 20;
-          println!("Inside the block: a = {}, b = {}", a, b);
+        let b = 20;
+        println!("Inside the block: a = {}, b = {}", a, b);
       }
 
       // println!("Outside the block: a = {}, b = {}", a, b);
@@ -484,8 +483,10 @@
 
   <details>
     <summary>Answers</summary> 
+
     - **f32 (single-precision floating-point):** Uses 32 bits to represent a floating-point number. This allows for a certain level of precision, but it's less precise than f64;
     - **f64 (double-precision floating-point):** Uses 64 bits to represent a floating-point number. The extra bits allow for a significantly larger range of representable numbers and, more importantly for this question, a much higher degree of precision in those representations.
+
   </details>
 
 28 - How do you declare a variable named 'initial' that stores the character 'P'?
