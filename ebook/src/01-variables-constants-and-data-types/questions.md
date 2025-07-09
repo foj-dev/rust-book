@@ -482,10 +482,10 @@
   [Playground!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=c0b536eb9115bacade017e9235e1390e)
 
   <details>
-    <summary>Answers</summary> 
-
-    - **f32 (single-precision floating-point):** Uses 32 bits to represent a floating-point number. This allows for a certain level of precision, but it's less precise than f64;
-    - **f64 (double-precision floating-point):** Uses 64 bits to represent a floating-point number. The extra bits allow for a significantly larger range of representable numbers and, more importantly for this question, a much higher degree of precision in those representations.
+   <summary>Answers</summary>
+    
+   - f32 (single-precision floating-point):** Uses 32 bits to represent a floating-point number. This allows for a certain level of precision, but it's less precise than f64;
+   - f64 (double-precision floating-point):** Uses 64 bits to represent a floating-point number. The extra bits allow for a significantly larger range of representable numbers and, more importantly for this question, a much higher degree of precision in those representations.
 
   </details>
 
