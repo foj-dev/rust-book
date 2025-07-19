@@ -9,6 +9,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let a: u8 = 15;
+      let b: u8 = 7;
+
+      //
+      println!("{:?}", a + b);
+  }
   ```
   </details>
 
@@ -20,6 +28,17 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let total = 10;
+      let sub = total - 3;
+      println!("{:?}", sub);
+
+      //
+      let mut total = 10;
+      total -= 3;
+      println!("{:?}", total);
+  }
   ```
   </details>
 
@@ -31,6 +50,17 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let x: u8 = 6;
+      let y: u8 = 8;
+
+      //
+      let result: u8 = x * y;
+
+      //
+      println!("{:?}", result);
+  }
   ```
   </details>
 
@@ -42,6 +72,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut number: f32 = 20.;
+      number /= 5.;
+
+      //
+      println!("{:?}", number);
+  }
   ```
   </details>
 
@@ -53,6 +91,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut remainder: u8 = 23;
+      remainder %= 4;
+
+      //
+      println!("{:?}", remainder);
+  }
   ```
   </details>
 
@@ -64,6 +110,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let num1: u8 = 12;
+      let num2: u8 = 5;
+
+      //
+      println!("{:?}", num1 + num2);
+  }
   ```
   </details>
 
@@ -75,6 +129,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let value: u8 = 9 + 2;
+      println!("{:?}", value);
+  }
   ```
   </details>
 
@@ -86,6 +145,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let first: u8 = 7;
+      let second: u8 = 3;
+
+      //
+      println!("{:?}", first * second);
+  }
   ```
   </details>
 
@@ -97,6 +164,17 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let dividend: u8 = 18;
+      let divisor: u8 = 3;
+
+      //
+      let result: u8 = dividend / divisor;
+
+      //
+      println!("{:?}", result);
+  }
   ```
   </details>
 
@@ -108,6 +186,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let n1: u8 = 25;
+      let n2: u8 = 7;
+
+      //
+      println!("{:?}", n1 % n2);
+  }
   ```
   </details>
 
@@ -119,6 +205,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut counter: u8 = 5;
+      counter += 3;
+
+      //
+      println!("{:?}", counter);
+  }
   ```
   </details>
 
@@ -130,6 +224,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut score: u8 = 20;
+      score -= 5;
+
+      //
+      println!("{:?}", score);
+  }
   ```
   </details>
 
@@ -141,6 +243,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut value: u8 = 2;
+      value *= 4;
+
+      //
+      println!("{:?}", value);
+  }
   ```
   </details>
 
@@ -152,6 +262,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut size: u8 = 30;
+      size /= 6;
+
+      //
+      println!("{:?}", size);
+  }
   ```
   </details>
 
@@ -163,6 +281,13 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      let mut mode: u8 = 17;
+      mode %= 5;
+
+      //
+      println!("{:?}", mode);
+  }
   ```
   </details>
 
