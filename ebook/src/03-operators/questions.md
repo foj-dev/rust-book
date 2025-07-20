@@ -595,6 +595,16 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let x: u8 = 1;
+      {
+          let y: u8 = 2;
+          println!("{:?}", x + y);
+      }
+      println!("{:?}", x);
+      // println!("{:?}", y); cannot find value `y` in this scope
+  }
   ```
   </details>
 
@@ -606,6 +616,21 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let x: u8 = 1;
+      {
+          //
+          let y: u8 = 2;
+          {
+              //
+              let z: u8 = 3;
+              println!("{:?}", x + y + z);
+          }
+          println!("{:?}", y);
+      }
+      println!("{:?}", x);
+  }
   ```
   </details>
 
@@ -617,6 +642,22 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let num: u8 = 100;
+      println!("{:?}", num);
+      {
+          let mut num: u8 = 100;
+          println!("{:?}", num);
+          //
+          {
+              num += 50;
+              println!("{:?}", num);
+          }
+          println!("{:?}", num);
+      }
+      println!("{:?}", num);
+  }
   ```
   </details>
 
@@ -628,6 +669,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let var: [u8; 2] = [2, 3];
+      println!("{:?}", var[0] + var[1] * var[1]);
+  }
   ```
   </details>
 
@@ -639,6 +685,13 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let var: [u8; 2] = [2, 3];
+
+      //
+      println!("{:?}", (var[0] + var[1]) * var[1]);
+  }
   ```
   </details>
 
@@ -650,6 +703,13 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let var: [u8; 2] = [2, 3];
+
+      //
+      println!("{:?}", var[0] * var[1] / var[1] % var[1]);
+  }
   ```
   </details>
 
@@ -661,6 +721,13 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let var: [u8; 2] = [2, 3];
+
+      //
+      println!("{:?}", var[0] + var[1] - var[0] + var[0] * var[0]);
+  }
   ```
   </details>
 
@@ -672,6 +739,13 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let var: [i8; 2] = [2, 3];
+
+      //
+      println!("{:?}", (var[0] + var[1]) - (var[0] + var[0]) * var[0]);
+  }
   ```
   </details>
 
@@ -683,6 +757,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let num1: i8 = 10;
+      let num2: i8 = 10;
+
+      //
+      println!("Num1 = Num2? {:?} ", num1 == num2);
+  }
   ```
   </details>
 
@@ -694,6 +776,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let f1: f32 = 3.14;
+      let f2: f32 = 2.71;
+
+      //
+      println!("f1 != f2? {}", f1 != f2);
+  }
   ```
   </details>
 
