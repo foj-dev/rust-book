@@ -299,6 +299,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let part1: &str = "Hello, ";
+      let part2: &str = "Rust!";
+
+      //
+      println!("{:?}", part1.to_owned() + part2);
+  }
   ```
   </details>
 
@@ -310,6 +318,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let s1: String = String::from("Language ");
+      let s2: String = String::from("Rust.");
+
+      //
+      println!("{:?}", s1 + &s2);
+  }
   ```
   </details>
 
@@ -321,6 +337,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let number: &str = "Number: ";
+      let number_str: String = String::from("42");
+
+      //
+      println!("{:?}", number.to_owned() + &number_str);
+  }
   ```
   </details>
 
@@ -332,6 +356,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let initial_message = "Welcome ";
+      let name: &str = "User";
+
+      //
+      println!("{:?}", initial_message.to_owned() + name);
+  }
   ```
   </details>
 
@@ -343,6 +375,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let greeting: String = String::from("Good ");
+      let period: &str = "day!";
+
+      //
+      println!("{:#?}", greeting.to_owned() + &period);
+  }
   ```
   </details>
 
@@ -354,6 +394,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let tup: (u8, u8, u8) = (10, 20, 30);
+      println!("{}, {}", tup.0, tup.1);
+  }
   ```
   </details>
 
@@ -365,6 +410,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let tup: (i32, i32) = (5, -2);
+      println!("{:?}", tup.0 * tup.1);
+  }
   ```
   </details>
 
@@ -376,6 +426,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let tup: ((u8, u8), (u8, u8)) = ((1, 2), (3, 4));
+      println!("{:?}", tup.0 .0 + tup.1 .1);
+  }
   ```
   </details>
 
@@ -387,6 +442,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let t1: (u8, u8) = (2, 5);
+      let t2: (u8, u8) = (8, 1);
+
+      //
+      println!("{:?}", t1.0 + t1.1 + t2.0 + t2.1);
+  }
   ```
   </details>
 
@@ -398,6 +461,15 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut t1: (f32, i32) = (0.0, 0);
+      t1.0 = -2.;
+      t1.1 = 2;
+
+      //
+      println!("{:#?}", t1);
+  }
   ```
   </details>
 
@@ -409,6 +481,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let arr: [i32; 5] = [1, 3, 5, 7, 9];
+      println!("{}, {}", arr[0], arr[4]);
+  }
   ```
   </details>
 
@@ -420,6 +497,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let arr: [i32; 3];
+      arr = [10, 20, 30];
+
+      //
+      println!("{:?}", arr[0] * arr[1] * arr[2]);
+  }
   ```
   </details>
 
@@ -431,6 +516,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let arr: [[i8; 2]; 2];
+      arr = [[2, 2], [4, 4]];
+
+      //
+      println!("{:?}", arr[0][0] * arr[0][1] * arr[1][0] * arr[1][1]);
+  }
   ```
   </details>
 
@@ -442,6 +535,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let arr1: [i8; 2] = [1, 2];
+      let arr2: [i8; 2] = [1, 2];
+
+      //
+      println!("{:?}", arr1[0] * arr1[1] * arr2[0] * arr2[1]);
+  }
   ```
   </details>
 
@@ -453,6 +554,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let a1: [u8; 2] = [4, 2];
+      let a2: [u8; 2] = [3, 6];
+
+      //
+      println!("{:?}, {:?}", a1[0] + a1[1], a2[0] + a2[1]);
+  }
   ```
   </details>
 
@@ -464,6 +573,17 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let var: char = 'a';
+      println!("{:?}", var);
+      //
+      {
+          let var: char = 'b';
+          println!("{:?}", var);
+      }
+      println!("{:?}", var);
+  }
   ```
   </details>
 
