@@ -795,6 +795,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let age1: u8 = 25;
+      let age2: u8 = 30;
+
+      //
+      println!("Age-1 > Age-2? {}", age1 > age2);
+  }
   ```
   </details>
 
@@ -806,6 +814,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let point_1: u8 = 5;
+      let point_2: u8 = 8;
+
+      //
+      println!("Point-1 < Point-2? {}", point_1 < point_2);
+  }
   ```
   </details>
 
@@ -817,6 +833,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let grade_1: u8 = 7;
+      let grade_2: u8 = 7;
+
+      //
+      println!("Grade-1 >= Grade-2? {}", grade_1 >= grade_2);
+  }
   ```
   </details>
 
@@ -828,6 +852,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let height_1: f32 = 1.70;
+      let height_2: f32 = 1.65;
+
+      //
+      println!("Height-1 <= Height-2? {}", height_1 <= height_2);
+  }
   ```
   </details>
 
@@ -839,6 +871,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let true_1: bool = true;
+      let true_2: bool = true;
+
+      //
+      println!("True-1 == True-2? {}", true_1 == true_2);
+  }
   ```
   </details>
 
@@ -850,6 +890,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let x: u8 = 5;
+      let y: u8 = 10;
+
+      //
+      println!("x != y? {}", x != y);
+  }
   ```
   </details>
 
@@ -861,6 +909,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let temp_1: f32 = 22.5;
+      let temp_2: f32 = 20.;
+
+      //
+      println!("Temp1 > Temp2? {}", temp_1 > temp_2);
+  }
   ```
   </details>
 
@@ -872,6 +928,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let count_1: u8 = 100;
+      let count_2: u8 = 99;
+
+      //
+      println!("Count 1 < Count 2? {}", count_1 < count_2);
+  }
   ```
   </details>
 
@@ -883,6 +947,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let cond_1: bool = true;
+      let cond_2: bool = true;
+
+      //
+      println!("Cond 1 && Cond 2: {}", cond_1 && cond_2);
+  }
   ```
   </details>
 
@@ -894,6 +966,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let flag_1: bool = false;
+      let flag_2: bool = false;
+
+      //
+      println!("Flag 1 && Flag 2: {}", flag_1 && flag_2);
+  }
   ```
   </details>
 
@@ -905,6 +985,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let active: bool = true;
+      let allowed: bool = false;
+
+      //
+      println!("Active && Allowed: {}", active && allowed);
+  }
   ```
   </details>
 
@@ -916,6 +1004,17 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let has_permission: bool = false;
+      let is_admin: bool = true;
+
+      //
+      println!(
+          " Has permission && Is admin: {}",
+          has_permission && is_admin
+      );
+  }
   ```
   </details>
 
@@ -927,6 +1026,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let option_1: bool = true;
+      let option_2: bool = true;
+
+      //
+      println!("Option 1 or Option 2: {}", option_1 || option_2);
+  }
   ```
   </details>
 
@@ -938,6 +1045,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let error_1: bool = false;
+      let error_2: bool = false;
+
+      //
+      println!("Error 1 or Error 2: {}", error_1 || error_2);
+  }
   ```
   </details>
 
@@ -949,6 +1064,14 @@
   <summary>Answers</summary>
 
   ```rust
+   fn main() {
+      //
+      let connected: bool = true;
+      let has_data: bool = false;
+
+      //
+      println!("Connected Or Has data: {}", connected && has_data);
+  }
   ```
   </details>
 
