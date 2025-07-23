@@ -1083,6 +1083,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let success: bool = false;
+      let failure: bool = true;
+
+      //
+      println!("Success OR Failure: {}", success || failure);
+  }
   ```
   </details>
 
@@ -1094,6 +1102,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let var: bool = true;
+      println!("{:?}", !var);
+  }
   ```
   </details>
 
@@ -1105,6 +1118,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let invalid: bool = false;
+      println!("{:?}", !invalid);
+  }
   ```
   </details>
 
@@ -1116,6 +1134,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let val_1: u8 = 8;
+      let val_2: u8 = 3;
+
+      //
+      println!("{:?}", (val_1 + val_2) - 1);
+  }
   ```
   </details>
 
@@ -1127,6 +1153,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let arr_1: (u32, u32) = (5, 10);
+      let arr_2 = arr_1.0 * arr_1.1;
+
+      //
+      println!("{:?}", arr_2);
+  }
   ```
   </details>
 
@@ -1138,6 +1172,16 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let mut arr: [i32; 3] = [2, 4, 6];
+      arr[0] /= 2;
+      arr[1] /= 2;
+      arr[2] /= 2;
+
+      //
+      println!("{:#?}", arr);
+  }
   ```
   </details>
 
@@ -1149,6 +1193,15 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let n_a: u8 = 7;
+      let n_b: u8 = 4;
+
+      //
+      let rema: u8 = n_a % n_b;
+      println!("Remainder: {:?} = 3? {:?}", rema, rema == 3);
+  }
   ```
   </details>
 
@@ -1160,6 +1213,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let num: String = String::from("Number: ");
+      let sum: u8 = 5 + 7;
+
+      //
+      println!("{}{:?}", num, sum);
+  }
   ```
   </details>
 
@@ -1171,6 +1232,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let tup: (f64, f64) = (2.5, 3.5);
+      let result: f64 = tup.0 + tup.1;
+
+      //
+      println!("{:.2}", result);
+  }
   ```
   </details>
 
@@ -1182,6 +1251,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let arr: [u16; 2] = [100, 200];
+      println!("{:?}", (arr[0] * 2) + (arr[1] * 3));
+  }
   ```
   </details>
 
@@ -1193,6 +1267,21 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let message: &str = "Start";
+      println!("{}", message.to_owned() + " -> End");
+  }
+
+  // string
+  fn main() {
+      //
+      let mut message: String = String::from("Start");
+      message += " -> End";
+
+      //
+      println!("{}", message);
+  }
   ```
   </details>
 
@@ -1204,6 +1293,11 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let tup: (i8, i8, i8) = (1, 2, 3);
+      println!("{:?}", tup.0 + tup.1 + tup.2);
+  }
   ```
   </details>
 
@@ -1215,6 +1309,15 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let outer_level: u8 = 5;
+      {
+          let inner_level: u8 = 10;
+          println!("{:?}", outer_level + inner_level);
+      }
+      // println!("{:?}", outer_level + inner_level);
+  }
   ```
   </details>
 
@@ -1226,6 +1329,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let data: [u8; 2] = [3, 2];
+
+      //
+      println!("{:?}", data[0] + data[1] * 5);
+      println!("{:?}", (data[0] + data[1]) * 5);
+  }
   ```
   </details>
 
@@ -1237,6 +1348,14 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let calc_values: [u8; 3] = [10, 3, 2];
+
+      //
+      println!("{:?}", calc_values[0] / calc_values[1] + calc_values[2]);
+      println!("{:?}", calc_values[0] / (calc_values[1] + calc_values[2]));
+  }
   ```
   </details>
 
@@ -1248,6 +1367,15 @@
   <summary>Answers</summary>
 
   ```rust
+  fn main() {
+      //
+      let global_factor: u8 = 2;
+      {
+          let block: [u8; 3] = [1, 2, 3];
+          let result = (block[0] + block[1] + block[2]) * global_factor;
+          println!("{:?}", result);
+      }
+  }
   ```
   </details>
 
