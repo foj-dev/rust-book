@@ -1285,6 +1285,12 @@
   ```
   </details>
 
+<!--
+Tuples!
+-->
+
+Create a tuple with the following values: Name, 80;
+
 67 - Create a tuple (i8, i8, i8) with (1, 2, 3). Sum all three numbers and print the result.
 
   [Playground!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=6b1cc95dbb15e089aceb517bb8388b84)
@@ -1320,6 +1326,8 @@
   }
   ```
   </details>
+
+
 
 69 - Given an array data with [3, 2], calculate and print the result of data[0]+data[1]∗5. Then, calculate and print (data[0]+data[1])∗5.
 
@@ -1379,3 +1387,52 @@
   ```
   </details>
 
+write a program that sorts the elements of a list in ascending order: Arr: [17, 43, 5, 54, 93];
+```rust
+```
+
+
+swap() (Trocar elementos de posição)
+
+Slice para Outro Slice com copy_from_slice()
+
+Trocar Elementos com swap_with_slice()
+
+**
+ 
+let ponto3d = (10, 20, 30);
+println!("Ponto 3D original: {:?}", ponto3d);
+
+// Desestruturando a tuple
+let (x, y, z) = ponto3d;
+
+// Criando uma nova tuple com 'y' modificado
+let novo_ponto3d = (x, y * 2, z);
+
+**
+
+chunks(), windows() e split_at() (Leitura de Partes)
+
+Iteradores (iter(), iter_mut(), into_iter()) ++  (como map, filter, fold, sum, max, min, etc.) 
+
+Create a tuple with the following values: Name, 20;
+Write a tuple that can receive a name and an age given by the user. Arr = (name, age);
+
+Create an empty array with capacity for 5 numbers and sort it in ascending order. Numbers = (20, 3, 15, 32, 74);
+
+Write a program that creates an array with the following values: 1, 2, 3, 4, 5. Print the inverted array.
+
+Write a program that finds the second largest number in a list. Arr: [17, 43, 5, 54, 93];
+```rust
+fn main() {
+    //
+    let arr: [u8; 5] = [17, 43, 5, 54, 93];
+    let mut arr_max: [u8; 5];
+
+    arr_max = arr;
+    arr_max.sort();
+    arr_max.reverse();
+
+    println!("{:?}", arr_max[1]);
+}
+```
