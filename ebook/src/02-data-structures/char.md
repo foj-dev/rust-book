@@ -8,6 +8,6 @@ let character: char = 'a';
 println!("{}", character);
 
 //
-let symbol: char = ' '
+let symbol: char = ' ';
 println!("{}", symbol);
 ```

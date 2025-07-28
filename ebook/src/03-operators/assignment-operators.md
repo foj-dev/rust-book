@@ -1,4 +1,4 @@
-## Assignment Operators
+## assignment operators
 
 Used to assign values to variables.
 

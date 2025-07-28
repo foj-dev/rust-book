@@ -1,4 +1,4 @@
-## Tuples
+## tuples
 
 Store multiple data items of different types in a fixed-size structure.
 
@@ -31,7 +31,7 @@ let (x, y, z) = person;
 println!("My name is {x}, i'm {y} years old and my height is {z}");
 ```
 
-## Tuples and mut
+## tuples and mut
 
 ```rust
 //

@@ -57,8 +57,6 @@
 
       //
       let result: u8 = x * y;
-
-      //
       println!("{:?}", result);
   }
   ```
@@ -171,8 +169,6 @@
 
       //
       let result: u8 = dividend / divisor;
-
-      //
       println!("{:?}", result);
   }
   ```
@@ -577,7 +573,6 @@
       //
       let var: char = 'a';
       println!("{:?}", var);
-      //
       {
           let var: char = 'b';
           println!("{:?}", var);
@@ -620,7 +615,6 @@
       //
       let x: u8 = 1;
       {
-          //
           let y: u8 = 2;
           {
               //
@@ -649,7 +643,6 @@
       {
           let mut num: u8 = 100;
           println!("{:?}", num);
-          //
           {
               num += 50;
               println!("{:?}", num);
@@ -688,8 +681,6 @@
   fn main() {
       //
       let var: [u8; 2] = [2, 3];
-
-      //
       println!("{:?}", (var[0] + var[1]) * var[1]);
   }
   ```
@@ -706,8 +697,6 @@
    fn main() {
       //
       let var: [u8; 2] = [2, 3];
-
-      //
       println!("{:?}", var[0] * var[1] / var[1] % var[1]);
   }
   ```
@@ -724,8 +713,6 @@
   fn main() {
       //
       let var: [u8; 2] = [2, 3];
-
-      //
       println!("{:?}", var[0] + var[1] - var[0] + var[0] * var[0]);
   }
   ```
@@ -742,8 +729,6 @@
    fn main() {
       //
       let var: [i8; 2] = [2, 3];
-
-      //
       println!("{:?}", (var[0] + var[1]) - (var[0] + var[0]) * var[0]);
   }
   ```
@@ -1326,8 +1311,6 @@ Create a tuple with the following values: Name, 80;
   }
   ```
   </details>
-
-
 
 69 - Given an array data with [3, 2], calculate and print the result of data[0]+data[1]∗5. Then, calculate and print (data[0]+data[1])∗5.
 

@@ -9,10 +9,10 @@ print!("Hello,");
 print!("world!");
 print!("...");
 
-//
-println!("\n");
+println!("");
 
 // Prints text with a line break
 println!("Hello,");
 println!("world!");
 println!("...");
+```

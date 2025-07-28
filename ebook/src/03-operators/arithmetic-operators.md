@@ -1,4 +1,4 @@
-## Arithmetic Operators
+## arithmetic operators
 
 Used for basic mathematical calculations.
 

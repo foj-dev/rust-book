@@ -16,10 +16,3 @@ Comments are used to document your code, making it more understandable for you a
   ...
 */
 ```
-
->💡
->- **Avoid excessively long comments:** keep them concise;
->- **Review and update comments:** ensure they remain accurate as your code evolves;
->- **Focus on the "why," not the "what":** explain the reasoning behind your code, not just what it does
->- **Don't comment self-explanatory lines of code:** if the code is clear on its own, a comment isn't >ne
-cessary.

@@ -1,5 +1,3 @@
-## Intergers
-
 ## u: unsigned integers
 
 Whole numbers that can only be positive.

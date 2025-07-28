@@ -1,4 +1,4 @@
-## Logical
+## logical
 
 Relating to operations that combine or modify Boolean (true/false) values to produce a single Boolean result.
 

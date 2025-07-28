@@ -23,7 +23,7 @@ fn main () {
 
 - ( )
 - *, / and %
-- \+ and -
+- + and -
 
 ```rust
 println!("Result: {}", 5 + 3 * 2);

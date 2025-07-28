@@ -1,4 +1,4 @@
-## Precedence
+## precedence
 
 The order in which operations are performed in an expression.
 

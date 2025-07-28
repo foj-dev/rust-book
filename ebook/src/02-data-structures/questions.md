@@ -291,36 +291,6 @@
   ```
   </details>  
 
-14 - Create a variable result_f64 of type f64 and assign it the expression 0.1 + 0.2. Print the result with at least 17 decimal places. Is the result exactly 0.3? Write a small code snippet to check if result_f64 == 0.3 and print "Equal" or "Different".
-
-  [Playground!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=204dd78761c165d2ef11e616d875b5fb)
-
-  <details>
-  <summary>Answers</summary>
-
-  ```rust
-  fn main() {
-      //
-      let result_f64: f64 = 0.1 + 0.2;
-      println!("{:.18}", result_f64);
-
-      //
-      if (result_f64 - 0.3).abs() < 1e-10 {
-          println!("Equal");
-      } else {
-          println!("Different");
-      }
-
-      //
-      if result_f64 == 0.3 {
-          println!("Equal");
-      } else {
-          println!("Different");
-      }
-  }
-  ```
-  </details>  
-
 15 - In an embedded system with limited memory, you need to store a sensor reading that ranges from -10.0 to +10.0 with two decimal places of precision. Declare a variable sensor_reading using f32 and assign 7.89. Print it. Justify why f32 might be suitable here.
 
   [Playground!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=a42032c341e71ba8e776fdec44592f51)
@@ -448,38 +418,6 @@
       // mismatched types  expected `bool`, found integer
       // let assing: bool = 1;
       // println!("{:?}", assing);
-  }
-  ```
-  </details>  
-
-21 - Declare a variable user_is_premium of type bool. Use an if to print "Full access granted!" if true, or "Consider going premium!" if false. Test with both values.
-
-  [Playground!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=d4e1c190dcce6432fa52dc23efc42e8d)
-
-  <details>
-  <summary>Answers</summary>
-
-  ```rust
-  fn main() {
-      //
-      let user_is_premium: bool = true;
-
-      //
-      if user_is_premium == true {
-          println!("Full access granted!");
-      } else {
-          println!("Consider going premium!");
-      }
-
-      //
-      let user_is_premium: bool = false;
-
-      //
-      if user_is_premium == true {
-          println!("Full access granted!");
-      } else {
-          println!("Consider going premium!");
-      }
   }
   ```
   </details>  

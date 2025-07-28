@@ -1,4 +1,4 @@
-## Array
+## array
 
 A list of data items that are all of the same type and have a fixed size.
 

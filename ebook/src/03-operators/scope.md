@@ -1,4 +1,4 @@
-## Scope
+## scope
 
 Enclosing a block of code within curly braces {}, limits its functionality to that specific scope, while still allowing access to previously defined data.
 

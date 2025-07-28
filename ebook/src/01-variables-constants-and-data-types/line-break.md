@@ -8,7 +8,6 @@ Line breaks are used when you want to improve text formatting.
 // line break: \n
 println!("What is your name?\nMy name is Rodolfo!");
 
-//
 println!("");
 
 // It allows the visualization of (\n): \\n

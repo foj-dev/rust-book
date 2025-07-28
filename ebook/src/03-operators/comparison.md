@@ -1,4 +1,4 @@
-## Comparison
+## comparison
 
 The act of checking if two or more items are equal, unequal, or ordered relative to one another.
 

@@ -1,4 +1,4 @@
-## Tuples
+## tuples
 
 Store multiple data items of different types in a fixed-size structure.
 

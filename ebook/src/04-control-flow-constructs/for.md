@@ -1,4 +1,4 @@
-## For
+## for
 
 For iterating over collections or a defined number of times.
 
@@ -8,7 +8,6 @@ for element in collection {
 
 }
 
-// i
 // 0 - 4
 for i in 0..5 {
     println!("{}", i);
