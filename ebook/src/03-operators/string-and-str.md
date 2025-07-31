@@ -1,4 +1,4 @@
-## String and &str
+## string and &str
 
 - **String:** use String when you need owned text data. It's ideal for situations where you're creating text (e.g., from user input), concatenating strings, or when you need the text to have a lifetime controlled by you;
 

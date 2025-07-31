@@ -21,6 +21,8 @@ fn main () {
 
 ## Precede ordination
 
+Some operators have priority over others
+
 - ( )
 - *, / and %
 - + and -

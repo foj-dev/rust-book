@@ -382,6 +382,59 @@
   ```
   </details>
 
+
+XX - Create a program that sorts the following list in ascending order: Elements = [17, 43, 5, 54, 93];
+
+  <details>
+  <summary>Answers</summary>
+
+  ```rust
+  fn main() {
+      //
+      let mut elements: [u8; 5] = [17, 43, 5, 54, 93];
+      elements.sort();
+
+      println!("Ordenation: {:?}", elements);
+  }
+  ```
+  </details>
+
+XX - Write a program that creates an array with the following values: 1, 2, 3, 4, 5. Print the inverted array.
+
+  <details>
+  <summary>Answers</summary>
+
+  ```rust
+  fn main() {
+      //
+      let mut arr: [u8; 5] = [1, 2, 3, 4, 5];
+      arr.reverse();
+
+      println!("{:?}", arr);
+  }
+  ```
+  </details>
+  
+XX - Write a program that finds the second largest number in a list. Arr: [17, 43, 5, 54, 93];
+
+  <details>
+  <summary>Answers</summary>
+  
+  ```rust
+  fn main() {
+      //
+      let arr: [u8; 5] = [17, 43, 5, 54, 93];
+      let mut arr_max: [u8; 5];
+  
+      arr_max = arr;
+      arr_max.sort();
+      arr_max.reverse();
+  
+      println!("{:?}", arr_max[1]);
+  }
+  ```  ```
+  </details>  
+
 20 - Create a tuple with three u8: (10, 20, 30). Access the first and second elements, add them and print the result.
 
   [Playground!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=85d4b821bcfc7f29c3750cc50b189c57)
@@ -1370,15 +1423,9 @@ Create a tuple with the following values: Name, 80;
   ```
   </details>
 
-write a program that sorts the elements of a list in ascending order: Arr: [17, 43, 5, 54, 93];
-```rust
-```
-
 
 swap() (Trocar elementos de posição)
-
 Slice para Outro Slice com copy_from_slice()
-
 Trocar Elementos com swap_with_slice()
 
 **
@@ -1401,21 +1448,4 @@ Iteradores (iter(), iter_mut(), into_iter()) ++  (como map, filter, fold, sum, m
 Create a tuple with the following values: Name, 20;
 Write a tuple that can receive a name and an age given by the user. Arr = (name, age);
 
-Create an empty array with capacity for 5 numbers and sort it in ascending order. Numbers = (20, 3, 15, 32, 74);
 
-Write a program that creates an array with the following values: 1, 2, 3, 4, 5. Print the inverted array.
-
-Write a program that finds the second largest number in a list. Arr: [17, 43, 5, 54, 93];
-```rust
-fn main() {
-    //
-    let arr: [u8; 5] = [17, 43, 5, 54, 93];
-    let mut arr_max: [u8; 5];
-
-    arr_max = arr;
-    arr_max.sort();
-    arr_max.reverse();
-
-    println!("{:?}", arr_max[1]);
-}
-```
