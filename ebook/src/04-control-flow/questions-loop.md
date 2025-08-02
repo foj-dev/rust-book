@@ -1,6 +1,17 @@
-// Questions - Loop
+# Questions - Loop
 
-// Create a program that uses a loop to count from 1 to 5. For each number, print the counter's value. The loop should stop when the counter reaches 6.
+01 - Create a program that uses a loop to count from 1 to 5. For each number, print the counter's value. The loop should stop when the counter reaches 6.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count_number: u8 = 0;
@@ -17,6 +28,17 @@ fn main() {
 }
 
 // Define a constant LIMIT with the value 100. Use a loop to add numbers to a mutable variable sum starting from 1. Stop the loop when the value of sum exceeds LIMIT and print the final value of sum.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 const LIMIT: u8 = 100;
 
 fn main() {
@@ -36,6 +58,17 @@ fn main() {
 }
 
 // Write a loop that repeatedly prints the message "I'm stuck in a loop!". Use a counter variable and an if statement to break the loop after the 3rd iteration.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count_num: u8 = 0;
@@ -53,8 +86,18 @@ fn main() {
     }
 }
 
-// Use a loop to iterate from 1 to 10. Inside the loop, check if the current number is even or odd using the modulo operator (%). Print the formatted result, such as "The number 3 is odd.". The loop should stop
-after the number 10.
+// Use a loop to iterate from 1 to 10. Inside the loop, check if the current number is even or odd using the modulo operator (%). Print the formatted result, such as "The number 3 is odd.". The loop should stop after the number 10.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count_number: u8 = 0;
@@ -75,6 +118,17 @@ fn main() {
 }
 
 // Initialize a mutable variable of type f32 with 0.0. In a loop, add 0.5 to this variable in each iteration. Print the value at each step and stop the loop when the value is greater than or equal to 5.0.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count_number: f32 = 0.;
@@ -108,6 +162,17 @@ Using only loop, if/else/else if and rand (SystemTime, UNIX_EPOCH)
 */
 
 //
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 use std::time::{SystemTime, UNIX_EPOCH};
 
@@ -229,6 +294,17 @@ Create a counter that starts from 1 and goes onwards. Inside a loop, check the f
 */
 
 //
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     println!("Count 1 .. 100!");
@@ -255,8 +331,18 @@ fn main() {
     }
 }
 
-// Start with capital = 1000.0 and goal = 2000.0. Each "year" (loop iteration), the capital increases by 7% (capital *= 1.07;). The loop should count how many years it takes for the capital to reach or exceed th
-e goal. When the goal is reached, the loop should break, returning the number of years. Print the result.
+// Start with capital = 1000.0 and goal = 2000.0. Each "year" (loop iteration), the capital increases by 7% (capital *= 1.07;). The loop should count how many years it takes for the capital to reach or exceed the goal. When the goal is reached, the loop should break, returning the number of years. Print the result.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut cap: f32 = 1000.;
@@ -276,8 +362,18 @@ fn main() {
     }
 }
 
-// Create a loop that starts with the character 'a' and prints each character up to 'f'. Use a mutable variable of type char and increment it. To increment, you can convert the char to u8, add 1, and convert bac
-k to char. Stop when the character is greater than 'f'.
+// Create a loop that starts with the character 'a' and prints each character up to 'f'. Use a mutable variable of type char and increment it. To increment, you can convert the char to u8, add 1, and convert back to char. Stop when the character is greater than 'f'.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut input_char: char = 'a';
@@ -297,8 +393,18 @@ fn main() {
     }
 }
 
-// Declare a mutable tuple let mut data = (0, false);. Create a loop that increments the first element of the tuple by 1 in each iteration. When the first element reaches the value 5, change the second element t
-o true and break the loop. Print the final tuple outside the loop.
+// Declare a mutable tuple let mut data = (0, false);. Create a loop that increments the first element of the tuple by 1 in each iteration. When the first element reaches the value 5, change the second element to true and break the loop. Print the final tuple outside the loop.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut data: (u8, bool) = (0, false);
@@ -317,7 +423,20 @@ fn main() {
 }
 
 // Create a tuple named person with the values (Person, 0, 0.0). Then, change its data 3 times using a loop, prompting the user for the name, age, and height, and print the values.
+
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
+
 fn main() {
     //
     let mut person: (String, u8, f32) = ("Person".to_string(), 0, 0.);
@@ -365,6 +484,17 @@ fn main() {
 }
 
 // Use a loop to display the elements of the following array: [u8; 5] = [10, 20, 30, 40, 50]
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let init_array: [u8; 5] = [10, 20, 30, 40, 50];
@@ -384,6 +514,17 @@ fn main() {
 }
 
 // Use a loop to display the elements in reverse order of the following array: [u8; 5] = [1, 2, 3, 4, 5]
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let init_array: [u8; 5] = [1, 2, 3, 4, 5];
@@ -402,6 +543,17 @@ fn main() {
 }
 
 // Could you create code to print the following four arrays: [u8; 2] = [1, 2];, [f32; 3] = [2.5, 7.3, 9.2];, [char; 4] = ['A', 'B', 'C', 'D'];, and [&str; 5] = ["Ana", "Bruno", "Carla", "Daniel", "Elza"];"
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let init_array_int: [u8; 2] = [1, 2];
@@ -462,6 +614,17 @@ fn main() {
 }
 
 // Create a code that sums the data in an array using a loop, here is an array: [u8; 4] = [1, 2, 4, 5]"
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let init_array: [u8; 4] = [1, 2, 4, 5];
@@ -482,8 +645,18 @@ fn main() {
     println!("Sum = {}", sum);
 }
 
-// Declare a mutable array of 5 positions of type i32, initialized with zeros: let mut my_array = [0; 5];. Use a loop and an index variable to fill the array with the values [10, 20, 30, 40, 50]. The loop should
- stop when the array is complete. Print the final array.
+// Declare a mutable array of 5 positions of type i32, initialized with zeros: let mut my_array = [0; 5];. Use a loop and an index variable to fill the array with the values [10, 20, 30, 40, 50]. The loop should stop when the array is complete. Print the final array.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut init_array: [i32; 5] = [0; 5];
@@ -504,6 +677,17 @@ fn main() {
 }
 
 // Calculate the factorial of 5 using a loop. You will need two mutable variables: one for the counter (from 1 to 5) and another to store the factorial result. Print the final result.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u8 = 1;
@@ -525,6 +709,17 @@ fn main() {
 }
 
 // Start with a variable number equal to 123. In a loop, divide the number by 2 and print the division result and the remainder (%). Continue the loop until the number is less than 1.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut number: f32 = 123.;
@@ -547,8 +742,18 @@ fn main() {
     }
 }
 
-// Inside a loop, calculate and print the result of the expression 5+counter∗2, where counter is a variable that starts at 0 and is incremented in each iteration. Use parentheses to change the precedence and cal
-culate (5 + counter)∗2 in a second print. Stop the loop when the counter reaches 5.
+// Inside a loop, calculate and print the result of the expression 5+counter∗2, where counter is a variable that starts at 0 and is incremented in each iteration. Use parentheses to change the precedence and calculate (5 + counter)∗2 in a second print. Stop the loop when the counter reaches 5.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u8 = 0;
@@ -566,8 +771,18 @@ fn main() {
     }
 }
 
-// Define a constant SECRET_NUMBER: u8 = 42;. Create a loop that simulates guessing attempts. An attempt variable should be incremented in each iteration. Use if/else if/else to print "Too low", "Too high", or "
-You got it!" when the attempt is equal to SECRET_NUMBER. Break the loop when you guess correctly.
+// Define a constant SECRET_NUMBER: u8 = 42;. Create a loop that simulates guessing attempts. An attempt variable should be incremented in each iteration. Use if/else if/else to print "Too low", "Too high", or "You got it!" when the attempt is equal to SECRET_NUMBER. Break the loop when you guess correctly.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 const SECRET_NUMBER: u8 = 42;
@@ -611,6 +826,17 @@ fn main() {
 }
 
 //Count down from 10 to 1. Use a loop and the format! macro to print messages like "Countdown: 10", "Countdown: 9", etc. When the counter reaches 0, print "Launch!" and break the loop.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     println!("-- Start --");
@@ -628,8 +854,18 @@ fn main() {
     }
 }
 
-//Declare a mutable array of 10 positions ([0; 10]). Use a loop with a counter to fill it. If the array index is even, fill it with the index value itself. If it's odd, fill it with twice the index value. Stop t
-he loop when the array is complete.
+//Declare a mutable array of 10 positions ([0; 10]). Use a loop with a counter to fill it. If the array index is even, fill it with the index value itself. If it's odd, fill it with twice the index value. Stop the loop when the array is complete.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut init_array: [i8; 10] = [0; 10];

@@ -177,7 +177,7 @@
   ```
   </details>
 
-// Create a program that calculates the sum of the digits of an integer using a for loop.
+08 - Create a program that calculates the sum of the digits of an integer using a for loop.
 
   [Playground!]()
   
@@ -205,7 +205,7 @@
   ```
   </details>
 
-// Develop a program that counts how many vowels (a, e, i, o, u) are in a string using a for loop.
+09 - Develop a program that counts how many vowels (a, e, i, o, u) are in a string using a for loop.
 
   [Playground!]()
   
@@ -237,7 +237,7 @@
   ```
   </details>
 
-// Write a program that finds the largest number in a list of numbers using a for loop. List = [17, 43, 5, 54, 93]
+10 - Write a program that finds the largest number in a list of numbers using a for loop. List = [17, 43, 5, 54, 93]
 
   [Playground!]()
   
@@ -260,7 +260,7 @@
   ```
 </details>
 
-// Create a program that finds the smallest number in a list of numbers using a for loop. List = [63, 36, 57, 7, 82]
+11 - Create a program that finds the smallest number in a list of numbers using a for loop. List = [63, 36, 57, 7, 82]
 
   [Playground!]()
   
@@ -286,7 +286,7 @@
   ```
   </details>
 
-// Develop a program that calculates the factorial of a positive integer provided by the user using a for loop.
+12 - Develop a program that calculates the factorial of a positive integer provided by the user using a for loop.
 
   [Playground!]()
   
@@ -318,7 +318,7 @@
   ```
   </details>
 
-// Write a program that prints the elements of a list in reverse order using a for loop. List = [1, 2, 3, 4, 5];
+13 - Write a program that prints the elements of a list in reverse order using a for loop. List = [1, 2, 3, 4, 5];
 
   [Playground!]()
   
@@ -338,7 +338,7 @@
   ```
   </details>
 
-// Create a program that checks if a word is a palindrome (reads the same forwards and backward) using a for loop.
+14 - Create a program that checks if a word is a palindrome (reads the same forwards and backward) using a for loop.
 
   [Playground!]()
   
@@ -372,7 +372,7 @@
   ```
   </details>
 
-// Write a program that counts how many times a specific character appears in a string using a for loop.
+15 - Write a program that counts how many times a specific character appears in a string using a for loop.
 
   [Playground!]()
   
@@ -423,7 +423,7 @@
   ```
   </details>
 
-// Create a program that calculates the product of all numbers in a list using a for loop.
+16 - Create a program that calculates the product of all numbers in a list using a for loop.
 
   [Playground!]()
   
@@ -445,7 +445,7 @@
   ```
   </details>
 
-// Write a program that receives 5 integer values, entered by the user, using an array and for.
+17 - Write a program that receives 5 integer values, entered by the user, using an array and for.
 
   [Playground!]()
   
@@ -471,7 +471,7 @@
   ```
   </details>
 
-// Develop a program that finds the average of a list of numbers using a for loop.
+18 - Develop a program that finds the average of a list of numbers using a for loop.
 
   [Playground!]()
   
@@ -505,7 +505,7 @@
   ```
   </details>
 
-// Develop a program that counts the number of negative numbers in a list using a for loop.
+19 - Develop a program that counts the number of negative numbers in a list using a for loop.
 
   [Playground!]()
   
@@ -539,7 +539,7 @@
   ```
   </details>
 
-// Write a code that receives 5 numbers entered by the user and adds them to an empty tuple, checks if there are even numbers and if so, adds them to another empty list.
+20 - Write a code that receives 5 numbers entered by the user and adds them to an empty tuple, checks if there are even numbers and if so, adds them to another empty list.
 
   [Playground!]()
   
@@ -573,7 +573,7 @@
   ```
   </details>
 
-// Write a program that receives the name and age of a user and stores them in a tuple using for.
+21 - Write a program that receives the name and age of a user and stores them in a tuple using for.
 
   [Playground!]()
   
