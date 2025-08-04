@@ -1,6 +1,17 @@
-// Questions - If
+# Questions - If
 
-// Write a program that asks the user for an integer and determines whether it's even or odd.
+01 - Write a program that asks the user for an integer and determines whether it's even or odd.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -24,7 +35,18 @@ fn main() {
     }
 }
 
-// Create a program that reads a number and prints whether it's positive, negative, or zero.
+02 - Create a program that reads a number and prints whether it's positive, negative, or zero.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -49,7 +71,18 @@ fn main() {
     }
 }
 
-// Develop a program that receives two numbers and shows which one is larger.
+03 - Develop a program that receives two numbers and shows which one is larger.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -81,7 +114,18 @@ fn main() {
     }
 }
 
-// Create a program that receives a student's grade (from 0 to 10) and reports if they passed (grade >= 7), are in recovery (grade >= 5 and < 7), or failed (grade < 5).
+04 - Create a program that receives a student's grade (from 0 to 10) and reports if they passed (grade >= 7), are in recovery (grade >= 5 and < 7), or failed (grade < 5).
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -132,7 +176,18 @@ fn main() {
     }
 }
 
-// Write a program that reads a person's age and determines if they can vote (16 years or older).
+05 - Write a program that reads a person's age and determines if they can vote (16 years or older).
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -157,7 +212,18 @@ fn main() {
     }
 }
 
-// Develop a program that asks for three numbers and determines which one is the largest.
+06 - Develop a program that asks for three numbers and determines which one is the largest.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -237,16 +303,23 @@ fn main() {
     }
 }
 
-/*
+07 - Ceate a program that converts a numerical score (0 to 100) to a letter grade, following these rules:
 
-Create a program that converts a numerical score (0 to 100) to a letter grade, following these rules:
- A: 90-100
- B: 80-89
- C: 70-79
- D: 60-69
- F: 0-59
+- A: 90-100
+- B: 80-89
+- C: 70-79
+- D: 60-69
+- F: 0-59
 
-*/
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
 
 //
 use std::io;
@@ -276,7 +349,18 @@ fn main() {
     }
 }
 
-// Write a program that receives the lengths of the three sides of a triangle and determines if it is equilateral (all sides equal), isosceles (two sides equal), or scalene (all sides different).
+08 - Write a program that receives the lengths of the three sides of a triangle and determines if it is equilateral (all sides equal), isosceles (two sides equal), or scalene (all sides different).
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -316,7 +400,18 @@ fn main() {
     }
 }
 
-// Write a program that receives a number from 1 to 7 and prints the corresponding day of the week (1 for Sunday, 2 for Monday, etc.), also indicating if it's a "Weekday" or "Weekend."use std::io;
+09 - Write a program that receives a number from 1 to 7 and prints the corresponding day of the week (1 for Sunday, 2 for Monday, etc.), also indicating if it's a "Weekday" or "Weekend."use std::io;
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -350,15 +445,22 @@ fn main() {
     }
 }
 
-/*
+10 - Write a program that reads a person's age and classifies them into the following categories:
 
-Write a program that reads a person's age and classifies them into the following categories:
- Child: 0-12 years
- Teenager: 13-17 years
- Adult: 18-59 years
- Elderly: 60 years or more
+- Child: 0-12 years
+- Teenager: 13-17 years
+- Adult: 18-59 years
+- Elderly: 60 years or more
 
-*/
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
 
 //
 use std::io;
@@ -386,8 +488,19 @@ fn main() {
     }
 }
 
-// Create a program that functions as a calculator. It should receive two numbers and an operator (+, -, *, /). The program should perform the corresponding operation and show the result. Also, handle division b
+11 - Create a program that functions as a calculator. It should receive two numbers and an operator (+, -, *, /). The program should perform the corresponding operation and show the result. Also, handle division b
 y zero.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -472,16 +585,22 @@ fn main() {
     }
 }
 
-/*
+12 - Develop a program that calculates a discount based on the purchase amount:
 
-Develop a program that calculates a discount based on the purchase amount:
- Purchases below R$ 100: no discount.
- Purchases from R$ 100 to R$ 500: 10% discount.
- Purchases above R$ 500: 20% discount.
+- Purchases below R$ 100: no discount;
+- Purchases from R$ 100 to R$ 500: 10% discount;
+- Purchases above R$ 500: 20% discount.
 
-*/
+[Playground!]()
 
-//
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -507,17 +626,23 @@ fn main() {
     }
 }
 
-/*
+13 - Write a program that calculates a person's BMI (weight / height²) and classifies the result:
 
-Write a program that calculates a person's BMI (weight / height²) and classifies the result:
- Below 18.5: Underweight
- 18.5 - 24.9: Normal weight
- 25.0 - 29.9: Overweight
- 30.0 or more: Obesity
+- Below 18.5: Underweight
+- 18.5 - 24.9: Normal weight
+- 25.0 - 29.9: Overweight
+- 30.0 or more: Obesity
 
-*/
+[Playground!]()
 
-//
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -552,7 +677,18 @@ fn main() {
     }
 }
 
-// Create a program that asks for a username and a password. If the username is "admin" and the password is "1234", display "Access granted". Otherwise, display "Access denied".
+14 - Create a program that asks for a username and a password. If the username is "admin" and the password is "1234", display "Access granted". Otherwise, display "Access denied".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 const ERROR_INPUT: &str = "Data entry error!";
@@ -582,7 +718,18 @@ fn main() {
     }
 }
 
-// Create the game "Rock, Paper, Scissors." Ask for the choices of two players and determine the winner based on the classic rules.
+15 - Create the game "Rock, Paper, Scissors." Ask for the choices of two players and determine the winner based on the classic rules.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 use std::time::{SystemTime, UNIX_EPOCH};
 
