@@ -8,10 +8,6 @@
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -34,6 +30,10 @@ fn main() {
         println!("Num = {}\nOdd!", num);
     }
 }
+```
+</details>
+
+
 
 02 - Create a program that reads a number and prints whether it's positive, negative, or zero.
 
@@ -43,10 +43,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -70,6 +66,10 @@ fn main() {
         println!("Num = {}!\nZero", num);
     }
 }
+```
+</details>
+
+
 
 03 - Develop a program that receives two numbers and shows which one is larger.
 
@@ -79,10 +79,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -113,6 +109,10 @@ fn main() {
         println!("Num A == Num B");
     }
 }
+```
+</details>
+
+
 
 04 - Create a program that receives a student's grade (from 0 to 10) and reports if they passed (grade >= 7), are in recovery (grade >= 5 and < 7), or failed (grade < 5).
 
@@ -122,10 +122,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -175,6 +171,10 @@ fn main() {
         println!("You passed!");
     }
 }
+```
+</details>
+
+
 
 05 - Write a program that reads a person's age and determines if they can vote (16 years or older).
 
@@ -184,10 +184,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -211,6 +207,10 @@ fn main() {
         println!("You cannot vote!");
     }
 }
+```
+</details>
+
+
 
 06 - Develop a program that asks for three numbers and determines which one is the largest.
 
@@ -220,10 +220,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -302,6 +298,10 @@ fn main() {
         println!("c > b > a");
     }
 }
+```
+</details>
+
+
 
 07 - Ceate a program that converts a numerical score (0 to 100) to a letter grade, following these rules:
 
@@ -639,10 +639,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -676,6 +672,10 @@ fn main() {
         println!("Error calculating BMI or invalid range!");
     }
 }
+```
+</details>
+
+
 
 14 - Create a program that asks for a username and a password. If the username is "admin" and the password is "1234", display "Access granted". Otherwise, display "Access denied".
 
@@ -685,10 +685,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 const ERROR_INPUT: &str = "Data entry error!";
@@ -717,6 +713,10 @@ fn main() {
         println!("Access Denied!");
     }
 }
+```
+</details>
+
+
 
 15 - Create the game "Rock, Paper, Scissors." Ask for the choices of two players and determine the winner based on the classic rules.
 
@@ -726,10 +726,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 use std::time::{SystemTime, UNIX_EPOCH};
 
@@ -827,3 +823,7 @@ fn main() {
         }
     }
 }
+```
+</details>
+
+
