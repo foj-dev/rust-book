@@ -1,0 +1,5 @@
+[book]
+authors = ["foj"]
+language = "en"
+src = "src"
+title = "Rust Book!"

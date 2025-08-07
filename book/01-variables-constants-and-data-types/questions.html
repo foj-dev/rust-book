@@ -1,0 +1,746 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Question - The Rust Programming Language</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Rust Programming Language</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="questions---variables-constants-and-data-types"><a class="header" href="#questions---variables-constants-and-data-types">Questions - Variables Constants and Data Types</a></h1>
+<hr />
+<p>01 - How would you write a single-line comment in rust?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=fa5635f01f8529974ad29fcad714a6ff">Playground!</a></p>
+  <details>
+  <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    // single-line comment
+}</code></pre></pre>
+  </details>
+<p>02 - What is the syntax for a block comments in rust?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=9eef6021ef3fd0cda684697b68fb29a3">Playground!</a></p>
+  <details>
+  <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    /* block comments */
+}</code></pre></pre>
+  </details>
+<p>03 - Which macro would you use to print text on the same line, whihout adding a newline at the end?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=ffa6c6172b2088f36a0bb092c1d69afd">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    print!("Print: whihout adding a newline at the end!");
+}</code></pre></pre>
+  </details>
+<p>04 - Which macro would you use to print text and automatically add a newline at the end?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=bbf1b87290e47b4d63762d07be948e7e">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    println!("Print: add newline at the end!");
+}</code></pre></pre>
+  </details>
+<p>05 - How do you insert an explicit newline within a string that is being printed with println!?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=c18cc1eb489ca7399c8d797f6af9e6a5">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    println!("First\nSecond!");
+}</code></pre></pre>
+  </details>
+<p>06 - What would be printed by the following code?</p>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    println!("First line\\nSecond line");
+}</code></pre></pre>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=f9933474d4f54c4c5c50167fcb9ffa06">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    println!("First line\\nSecond line");
+}</code></pre></pre>
+  </details>
+<p>07 - What will be the output of the following code?</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let name = "Ana";
+let age = 30;
+let text = format!("Hello, {}! You are {} years old.", name, age);
+println!("{}", text);
+<span class="boring">}</span></code></pre></pre>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=66b53067454a20b107933a77820f0c42">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    let name = "Ana";
+    let age = 30;
+    let text = format!("Hello, {}! You are {} years old.", name, age);
+    println!("{}", text);
+}</code></pre></pre>
+  </details>
+<p>08 - How would you use the format! macro to create the string "The value is: 42" from the number 42?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=1ed69cf700df24418c0c55c5cde8c4f4">Playground!</a></p>
+ <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let number = 42;
+    let formated = format!("The value is: {}", number);
+    println!("{}", formated);
+}</code></pre></pre>
+ </details>
+<p>09 - How can you format the number 7 so that it is displayer as "0007" using format!?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=0df831110a2b60915f120a25b1399c06">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let number: u8 = 7;
+    println!("{:04}", number);
+
+    //
+    let formated = format!("{:04}", number);
+    println!("{}", formated);
+}</code></pre></pre>
+  </details>
+<p>10 - What is the utily of "{:?}" in the format! macro? Give an example of when you would use it.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=670868879cb54931c2ff8bf98de968a9">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    let number: u8 = 1;
+    println!("{:?}", number);
+}</code></pre></pre>
+  </details>
+<p>11 - What does the specifier "{:#?}" do differently from "{:?}" when formatting a tuple or struct?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=b534638ecb6ea4cc4b269ae0802c1bfd">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    let arr = (1, 2, 3, 4);
+
+    //
+    println!("{:#?}\n", arr);
+    println!("{:?}", arr);
+}</code></pre></pre>
+  </details>
+<p>12 - How do you declare a variable named score and assign in the value 100?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=487b3cbc4b51474715d196cf24a54899">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let score: u8 = 100;
+    println!("Value: {}", score);
+}</code></pre></pre>
+  </details>
+<p>13 - Write a line of code that declares a variable city with the value "Paris" and then prints it to the screen.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=b8fcb114295f9dc6b824778683735d34">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let city: &amp;str = "Paris";
+    println!("City: {}!", city);
+    println!("City: {:?}!", city);
+}</code></pre></pre>
+  </details>
+<p>14 - Which keyword is used to declare a variable that can have its value changed after initialization?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=1d26ec751414229f76fad50bf10b45e2">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    // mut
+}  </code></pre></pre>
+  </details>
+<p>15 - Declare a mutable variable named counter initialized with 0. Then, write the code to change the value of counter to 5 and print it.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=9d0dbd340798526b8af17861dac4c10f">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let mut counter: u8 = 0;
+    println!("Counter = {:?}", counter);
+
+    counter = 5;
+    println!("Counter = {:?}", counter);
+}</code></pre></pre>
+  </details>
+<p>16 - How do you declare a constant named MAX_SPEED with the value 9000 of type i32?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=9818b68a6204c70c9b9ff767ae640ccb">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">const MAX_SPEED: i32 = 9000;
+
+fn main() {
+    //
+    println!("Max Speed: {:?}", MAX_SPEED);
+}</code></pre></pre>
+  </details>
+<p>17 - Is it possible to change the value of a constant after its declaration?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=3e186423e1b02403a6489773539ab55d">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    // no
+}</code></pre></pre>
+  </details>
+<p>18 - What is "shadowing" in Rust? Explain with a code example and what the output would be.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=aacfd95ca5035c54c55cc00cc5a35ef4">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let x: i8 = 0;
+    {
+      let x: f32 = 1.0;
+      println!("{:?}", x);
+    }
+    println!("{:?}", x);
+}</code></pre></pre>
+  </details>
+<p>19 - What will be the output of the following code?</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x = 5;
+
+let x = x + 1;
+{
+  let x = x * 2;
+  println!("The inner value of x is: {}", x);
+}
+
+println!("The outer value of x is: {}", x);
+<span class="boring">}</span></code></pre></pre>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=29acc4265a22d22caa0e1e9c8ebec2a1">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    let x = 5;
+    let x = x + 1;
+    {
+      let x = x * 2;
+      println!("The inner value of x is: {}", x);
+    }
+
+    println!("The outer value of x is: {}", x);
+}</code></pre></pre>
+  </details>
+<p>20 - What will be the output of the following code? Explain why</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let a = 10;
+{
+  let b = 20;
+  println!("Inside the block: a = {}, b = {}", a, b);
+}
+
+// println!("Outside the block: a = {}, b = {}", a, b);
+println!("Outside the block: a = {}", a);
+<span class="boring">}</span></code></pre></pre>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=20123a0e1fb08faaaa95fbe669b38fd5">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    let a = 10;
+    {
+      let b = 20;
+      println!("Inside the block: a = {}, b = {}", a, b);
+    }
+
+    // println!("Outside the block: a = {}, b = {}", a, b);
+    println!("Outside the block: a = {}", a);
+}</code></pre></pre>
+  </details>
+<p>21 - What would happen if the commented line were uncommented and compiled?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=b0fb33a31ace400c7958947b73f2bca4">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    // fail to compile and produce a compile-time error.
+}</code></pre></pre>
+  </details>
+<p>22 - What is the range of values that a u8 type can store?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=cc7a5ff024c87dceaa7364920ed84d5c">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    println!("u8: Max = {} and Min = {}", std::u8::MAX, std::u8::MIN);
+}</code></pre></pre>
+  </details>
+<p>23 - What is the range of values that an i8 type can store?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=121241dc00402af3cba3f08f47996427">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    //
+    println!("i8: Max = {} and Min = {}", std::i8::MAX, std::i8::MIN);
+}</code></pre></pre>
+  </details>
+<p>24 - How do you declare a variable maximum_age of type u16 with the value 150?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=960a6771cb88056c79bfcb5e29aa9fa8">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let maximum_age: u16 = 150;
+    println!("maximum_age: {}", maximum_age);
+}</code></pre></pre>
+  </details>
+<p>25 - How can you print the minimum and maximum values for the u32 type using its associated constants?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=fa9ce766e67a11d4b2ec3f63d7e0383d">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">const MAXIMUM: u32 = u32::MAX;
+const MINIMUM: u32 = u32::MIN;
+
+fn main() {
+    //
+    println!("Max = {}", MAXIMUM);
+    println!("MIN = {}", MINIMUM);
+}</code></pre></pre>
+  </details>
+<p>26 - Declare a variable named 'price' of type f32 with the value 19.99.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=e77d724638b13ea2ab70724acc9eb349">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust"> fn main() {
+    //
+    let price: f32 = 19.99;
+    println!("Price = {}", price);
+}  </code></pre></pre>
+  </details>
+<p>27 - Which of the types f32 or f64 offers greater precision?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=c0b536eb9115bacade017e9235e1390e">Playground!</a></p>
+  <details>
+   <summary>Answers</summary>
+<ul>
+<li><strong>f32 (single-precision floating-point):</strong> Uses 32 bits to represent a floating-point number. This allows for a certain level of precision, but it's less precise than f64;</li>
+<li><strong>f64 (double-precision floating-point):</strong> Uses 64 bits to represent a floating-point number. The extra bits allow for a significantly larger range of representable numbers and, more importantly for this question, a much higher degree of precision in those representations.</li>
+</ul>
+  </details>
+<p>28 - How do you declare a variable named 'initial' that stores the character 'P'?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=0aa9d42ef8dfde633e562d54d8488249">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let initial = 'P';
+    println!("The initial is: {}", initial);
+}</code></pre></pre>
+  </details>
+<p>29 - Can a char type in Rust store only ASCII characters? Explain.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=a2367bdb18135f5d79b06ecf3e0d75fa">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let cyrillic_char = 'Я';
+    println!("Cyrillic character: {}", cyrillic_char);
+}</code></pre></pre>
+  </details>
+<p>30 - Declare a variable named 'rain' and assign the value true to it.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=cc276fc9404a4321d32bbbe299ea0d56">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let rain: bool = true;
+    println!("Rain? {}", rain);
+}</code></pre></pre>
+  </details>
+<p>31 - What are the only two possible values for a variable of type bool?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=aed5d71ff42bf8d07364d18d6e26f644">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+    // true and false
+}</code></pre></pre>
+  </details>
+<p>32 - How do you declare a tuple named 'product' that stores an item's name (string), its quantity (integer), and its price (floating-point)? For example: ("Pe
+n", 10, 1.50).</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=a5bf6056eb8f5be1f01aa1d61b065536">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let product = ("Pen", 10, 1.50);
+    println!("Product = {:?}", product);
+}</code></pre></pre>
+  </details>
+<p>33 - Given the tuple 'let coordinates = (10, 20, 30);', how would you destructure this tuple into three separate variables x, y, and z?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=5fd94401acad8e2e5818b2d262e445b1">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let product: (&amp;str, u8, f32) = ("Pen", 10, 1.50);
+    println!("Product: {}, {} and {}", product.0, product.1, product.2);
+
+    //
+    let (name, quantity, price): (&amp;str, u8, f32) = ("Pen", 10, 1.50);
+    println!("Product: {}, {} and {}", name, quantity, price);
+
+    //
+    let (name, quantity, price) = product;
+    println!("Product: {}, {} and {}", name, quantity, price);
+}</code></pre></pre>
+  </details>
+<p>34 - How would you access the second element of the tuple 'let rgb = (255, 0, 128):'?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=8c5e493c268b625e837a7ff63689eb77">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let product: (&amp;str, &amp;str, &amp;str) = ("Item 1", "Item 2", "Item 3");
+    println!("Product: {}", product.1);
+
+    //
+    let (item_01, item_02, item_03) = product;
+    println!("Product: {}", item_02);
+}</code></pre></pre>
+  </details>
+<p>35 - Declare an array named 'notes' that can store 5 numbers of type f32. Initialize it with some values.</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=20591a94ade8f226ee643ebdb4d37d82">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let notes: [u8; 5] = [1, 2, 3, 4, 5];
+    println!("{:?}", notes);
+
+    //
+    let notes: [u8; 5];
+    notes = [1, 2, 3, 4, 5];
+    println!("{:?}", notes);
+
+    //
+    let notes_slice: &amp;[u8] = &amp;notes;
+    println!("{:?}", notes_slice);
+
+    //
+    let partial_notes_slice: &amp;[u8] = &amp;notes[0..3];
+    println!("{:?}", partial_notes_slice);
+}</code></pre></pre>
+  </details>
+<p>36 - What is the main difference between an array and a tuple in terms of the data types they can store?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=97f67c372ff407555be540707a5df1bc">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<ul>
+<li>
+<p>Tuples ((T1, T2, ..., Tn)):</p>
+<ul>
+<li>Heterogeneous: Each element can have a different type (T1, T2, etc.);</li>
+<li>Fixed Size: The number of elements is known at compile time and cannot change.</li>
+</ul>
+<p>Example:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let person_data: (&amp;str, i32, f64) = ("Alice", 30, 60.5);
+let coordinates: (i32, i32) = (10, 20);
+<span class="boring">}</span></code></pre></pre>
+</li>
+<li>
+<p>Arrays ([T; N]):</p>
+<ul>
+<li>Homogeneous: All elements must have the identical type T;</li>
+<li>Fixed Size: The number of elements N is known at compile time and cannot change.</li>
+</ul>
+<p>Example:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let numbers: [i32; 3] = [1, 2, 3];
+let words: [&amp;str; 2] = ["hello", "world"];
+<span class="boring">}</span></code></pre></pre>
+</li>
+</ul>
+  </details>
+<p>37 - How would you access the first element of the array: let cores = ["red", "green", "blue"];?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=783ac15d71fa170ba5166fd884d9fdcb">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    let list: [&amp;str; 3] = ["red", "green", "blue"];
+    println!("List: {:?}", list);
+
+    //
+    let list: [&amp;str; 3] = ["red", "green", "blue"];
+    println!("List: {:?}", list[0]);
+}</code></pre></pre>
+  </details>
+<p>38 - What is the result of the expression 10 % 3?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=7d3fdc6c7c4879c3854fbaa87d9f910f">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    println!("{}", 10 % 3);
+}</code></pre></pre>
+  </details>
+<p>39 - What is the result of the expression 5.0 / 2.0?</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=90ff979dab835a73d3d0af9376e0f359">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    println!("{}", 5.0 / 2.0);
+}</code></pre></pre>
+  </details>
+<p>40 - What will be the result of the following expression in Rust, and why? println!("{}", 20 - 5 * 2);</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=3dc47883e25713d88cec14a9d35d0dde">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    println!("{}", 20 - 5 * 2);
+}</code></pre></pre>
+  </details>
+<p>41 - What will be the result of the following expression in Rust, and why? println!("{}", (20 - 5) * 2);</p>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2024&amp;gist=8c121f9ed99c9fae2097aaea52290c79">Playground!</a></p>
+  <details>
+    <summary>Answers</summary>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    //
+    println!("{}", (20 - 5) * 2);
+}</code></pre></pre>
+  </details>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../01-variables-constants-and-data-types/arithmetic-operators.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../02-data-structures/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../01-variables-constants-and-data-types/arithmetic-operators.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../02-data-structures/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

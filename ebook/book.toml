@@ -1,5 +1,0 @@
-[book]
-authors = ["nfoj"]
-language = "en"
-src = "src"
-title = "The Rust Programming Language"
