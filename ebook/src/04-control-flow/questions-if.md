@@ -317,11 +317,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
-//
 use std::io;
 
 fn main() {
@@ -348,6 +343,9 @@ fn main() {
         println!("Error!");
     }
 }
+```
+</details>
+
 
 08 - Write a program that receives the lengths of the three sides of a triangle and determines if it is equilateral (all sides equal), isosceles (two sides equal), or scalene (all sides different).
 
@@ -357,10 +355,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -399,6 +393,9 @@ fn main() {
         println!("Scalene");
     }
 }
+```
+</details>
+
 
 09 - Write a program that receives a number from 1 to 7 and prints the corresponding day of the week (1 for Sunday, 2 for Monday, etc.), also indicating if it's a "Weekday" or "Weekend."use std::io;
 
@@ -408,10 +405,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -444,6 +437,9 @@ fn main() {
         println!("Error!");
     }
 }
+```
+</details>
+
 
 10 - Write a program that reads a person's age and classifies them into the following categories:
 
@@ -458,11 +454,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
-//
 use std::io;
 
 fn main() {
@@ -487,9 +478,10 @@ fn main() {
         println!("Error: Age > 112!");
     }
 }
+```
+</details>
 
-11 - Create a program that functions as a calculator. It should receive two numbers and an operator (+, -, *, /). The program should perform the corresponding operation and show the result. Also, handle division b
-y zero.
+11 - Create a program that functions as a calculator. It should receive two numbers and an operator (+, -, *, /). The program should perform the corresponding operation and show the result. Also, handle division by zero.
 
 [Playground!]()
 
@@ -497,10 +489,6 @@ y zero.
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -584,6 +572,9 @@ fn main() {
         println!("[Error] Mathematical operator not allowed!");
     }
 }
+```
+</details>
+
 
 12 - Develop a program that calculates a discount based on the purchase amount:
 
@@ -597,10 +588,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -625,6 +612,9 @@ fn main() {
         println!("Error!");
     }
 }
+```
+</details>
+
 
 13 - Write a program that calculates a person's BMI (weight / height²) and classifies the result:
 
