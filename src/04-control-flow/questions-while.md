@@ -1,6 +1,17 @@
-// Questions - While
+# Questions - While
 
-// Write a Rust program that uses a while loop to print numbers from 1 to 5, one per line.
+Write a Rust program that uses a while loop to print numbers from 1 to 5, one per line.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u8 = 0;
@@ -11,7 +22,18 @@ fn main() {
     }
 }
 
-// Using a while loop, create a program that prints a countdown from 10 to 1, and then the message "Launch!".
+Using a while loop, create a program that prints a countdown from 10 to 1, and then the message "Launch!".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u8 = 10;
@@ -26,7 +48,18 @@ fn main() {
     }
 }
 
-// Write a program that calculates the sum of all integers from 1 to 100, using a while loop. Print the final result.
+Write a program that calculates the sum of all integers from 1 to 100, using a while loop. Print the final result.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut sum: u16 = 0;
@@ -40,7 +73,18 @@ fn main() {
     println!("Sum = {}", sum);
 }
 
-// Create a while loop that is intentionally infinite, but uses the break keyword to exit the loop when a counter reaches the value 7. Print the counter's value in each iteration before checking the exit condition.
+Create a while loop that is intentionally infinite, but uses the break keyword to exit the loop when a counter reaches the value 7. Print the counter's value in each iteration before checking the exit condition.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u8 = 0;
@@ -55,7 +99,18 @@ fn main() {
     }
 }
 
-// Check if a given number (e.g., num = 32) is a power of 2 using a while loop. Print true or false.
+Check if a given number (e.g., num = 32) is a power of 2 using a while loop. Print true or false.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -87,7 +142,18 @@ fn main() {
     }
 }
 
-// Write a program with a while loop that iterates from 0 to 10. If the current number is odd, use continue to skip printing that number. Print only the even numbers.
+Write a program with a while loop that iterates from 0 to 10. If the current number is odd, use continue to skip printing that number. Print only the even numbers.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u8 = 0;
@@ -103,7 +169,18 @@ fn main() {
     }
 }
 
-// Write a program that asks the user to enter a number greater than 10. Use a while loop to keep asking for input until a valid number is provided.
+Write a program that asks the user to enter a number greater than 10. Use a while loop to keep asking for input until a valid number is provided.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -132,7 +209,18 @@ fn main() {
     }
 }
 
-// Calculate the factorial of a number (e.g., 5!) using a while loop. Print the result.
+Calculate the factorial of a number (e.g., 5!) using a while loop. Print the result.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -163,7 +251,18 @@ fn main() {
     }
 }
 
-// Given an integer (e.g., 12345), use a while loop to print it in reverse (i.e., 54321). Hint: use the % (modulo) and / (division) operators.
+Given an integer (e.g., 12345), use a while loop to print it in reverse (i.e., 54321). Hint: use the % (modulo) and / (division) operators.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -194,7 +293,18 @@ fn main() {
     println!("Reverse number: {}", reverse_count);
 }
 
-// Write a program that counts the number of digits in a positive integer using a while loop. For example, 12345 has 5 digits.
+Write a program that counts the number of digits in a positive integer using a while loop. For example, 12345 has 5 digits.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -222,7 +332,18 @@ fn main() {
     println!("Count numbers {} = {}", save_number, count);
 }
 
-// Print the squares of numbers from 1 to 7 using a while loop.
+Print the squares of numbers from 1 to 7 using a while loop.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut count: u16 = 0;
@@ -235,7 +356,18 @@ fn main() {
     }
 }
 
-// Given a number let mut num = 64;, use a while loop to repeatedly divide it by 2 until the result is less than or equal to 1. Print each division result.
+Given a number let mut num = 64;, use a while loop to repeatedly divide it by 2 until the result is less than or equal to 1. Print each division result.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut number: u8 = 64;
@@ -247,7 +379,18 @@ fn main() {
     }
 }
 
-// Find and print the first even number greater than 50 using a while loop.
+Find and print the first even number greater than 50 using a while loop.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 fn main() {
     //
     let mut number: u8 = 51;
@@ -259,7 +402,18 @@ fn main() {
     println!("Result = {}", number);
 }
 
-// Create a secret number (e.g., secret = 42). Ask the user to guess the number. Use a while loop to continue the game until the user guesses correctly. Give hints ("too high", "too low"). (Requires std::io for user input).
+Create a secret number (e.g., secret = 42). Ask the user to guess the number. Use a while loop to continue the game until the user guesses correctly. Give hints ("too high", "too low"). (Requires std::io for user input).
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -291,7 +445,18 @@ fn main() {
     println!("YOU WIN!");
 }
 
-// Ask the user for a number and, using a while loop, print the first 5 multiples of that number.
+Ask the user for a number and, using a while loop, print the first 5 multiples of that number.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -319,7 +484,6 @@ fn main() {
     }
 }
 
-/*
 
 Using nested while loops to print a 3x3 square of asterisks.
 
@@ -327,9 +491,16 @@ Using nested while loops to print a 3x3 square of asterisks.
 ***
 ***
 
-*/
+[Playground!]()
 
-//
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -365,7 +536,18 @@ fn main() {
     }
 }
 
-// Write a Rust program that prompts the user to enter a positive integer. Then, find and display the first five divisors of that number. If fewer than five divisors are found, the program should state that 'This is first 5 multiple numbers were not found!'.
+Write a Rust program that prompts the user to enter a positive integer. Then, find and display the first five divisors of that number. If fewer than five divisors are found, the program should state that 'This is first 5 multiple numbers were not found!'.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+
+```
+</details>
+
 use std::io;
 
 fn main() {
