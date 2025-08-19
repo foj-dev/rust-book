@@ -1,27 +1,67 @@
 # Questions
 
-// Write code that creates an empty String and prints it.
+Write code that creates an empty String and prints it.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let empty_string: String = String::new();
     println!("{}", empty_string);
 }
 
-// Create a String from the string literal "Hello, Rust!".
+Create a String from the string literal "Hello, Rust!".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let literal_string: String = String::from("Hello, Rust!");
     println!("{}", literal_string);
 }
 
-// Declare a variable that holds a string slice (&str) with the value "Learning Rust".
+Declare a variable that holds a string slice (&str) with the value "Learning Rust".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let hold_string: &str = "Learning Rust";
     println!("{}", hold_string);
 }
 
-// Given a String, write the code to get a &str that represents the entire String.
+Given a String, write the code to get a &str that represents the entire String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let input_string: String = String::from("Learning Rust!");
@@ -38,7 +78,17 @@ fn main() {
     println!("{}", input_str);
 }
 
-// Write a code that receives a text in "string" and converts it to "str" and then prints it on the screen.
+Write a code that receives a text in "string" and converts it to "str" and then prints it on the screen.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -52,7 +102,17 @@ fn main() {
     println!("\nText converted to &str: {}", text_string);
 }
 
-// Convert the integer 123 into a String.
+Convert the integer 123 into a String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -69,6 +129,16 @@ fn main() {
 }
 
 // Use the .to_string() method or String::from() to create a new String by concatenating a &str and an existing String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -88,6 +158,16 @@ fn main() {
 }
 
 // Create a mutable String and append a &str to it using the push_str() method.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let mut mutable_string: String = String::from("Hello, ");
@@ -96,6 +176,16 @@ fn main() {
 }
 
 // Add a single character (char) to the end of a mutable String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let mut single_char: String = String::from("Hello, word");
@@ -105,6 +195,16 @@ fn main() {
 }
 
 // Combine a &str, a String, and a number into a new String using the format! macro.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let var_str: &str = "1";
@@ -117,6 +217,16 @@ fn main() {
 }
 
 // Create a new String by removing all whitespace from a string.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -131,6 +241,16 @@ fn main() {
 }
 
 // Replace all occurrences of the substring "error" with "success" in a &str, creating a new String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -145,6 +265,16 @@ fn main() {
 }
 
 // Replace only the first occurrence of "old" with "new" in a &str, creating a new String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -159,6 +289,16 @@ fn main() {
 }
 
 // Check if a &str contains the substring "Rust".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -176,6 +316,16 @@ fn main() {
 }
 
 // Check if a filename in a string ends with the suffix .rs.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -193,6 +343,16 @@ fn main() {
 }
 
 // Check if a &str starts with the prefix "https://".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -210,6 +370,16 @@ fn main() {
 }
 
 // Create code that takes a String and returns a slice containing only the first word. Assume that words are separated by spaces.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -224,6 +394,16 @@ fn main() {
 }
 
 // Find the starting byte index of the first occurrence of the substring "world".
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -241,6 +421,16 @@ fn main() {
 }
 
 // Write a function that accepts a String and returns its first character as a char.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -271,6 +461,16 @@ fn main() {
 }
 
 // Write a code that counts the number of characters (char) in a &str, not the number of bytes.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -292,6 +492,16 @@ fn main() {
 }
 
 // Write a code that counts the number of characters (char) in a sentence, excluding whitespace.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -313,6 +523,16 @@ fn main() {
 }
 
 // Write a code that takes a &mut String and replaces all lowercase 'a' characters with uppercase 'A's, modifying the original String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -342,6 +562,16 @@ fn main() {
 }
 
 // Write code that removes the last character from a String.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 use std::io;
 
 fn main() {
@@ -384,6 +614,16 @@ fn main() {
 }
 
 // Use the .clear() method to empty a String without deallocating its memory capacity.
+
+[Playground!]()
+
+<details>
+<summary>Answers</summary>
+
+```rust
+```
+</details>
+
 fn main() {
     //
     let mut var_string: String = String::with_capacity(50);
