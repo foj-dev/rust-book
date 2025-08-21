@@ -8,14 +8,14 @@ Write code that creates an empty String and prints it.
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let empty_string: String = String::new();
     println!("{}", empty_string);
 }
+```
+
+</details>
 
 Create a String from the string literal "Hello, Rust!".
 
@@ -25,14 +25,14 @@ Create a String from the string literal "Hello, Rust!".
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let literal_string: String = String::from("Hello, Rust!");
     println!("{}", literal_string);
 }
+```
+
+</details>
 
 Declare a variable that holds a string slice (&str) with the value "Learning Rust".
 
@@ -42,14 +42,14 @@ Declare a variable that holds a string slice (&str) with the value "Learning Rus
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let hold_string: &str = "Learning Rust";
     println!("{}", hold_string);
 }
+```
+
+</details>
 
 Given a String, write the code to get a &str that represents the entire String.
 
@@ -59,9 +59,6 @@ Given a String, write the code to get a &str that represents the entire String.
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let input_string: String = String::from("Learning Rust!");
@@ -77,6 +74,9 @@ fn main() {
     let input_str: &str = input_string.as_str();
     println!("{}", input_str);
 }
+```
+
+</details>
 
 Write a code that receives a text in "string" and converts it to "str" and then prints it on the screen.
 
@@ -86,9 +86,6 @@ Write a code that receives a text in "string" and converts it to "str" and then 
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -101,6 +98,9 @@ fn main() {
     let text_string: &str = input_string.as_str();
     println!("\nText converted to &str: {}", text_string);
 }
+```
+
+</details>
 
 Convert the integer 123 into a String.
 
@@ -110,9 +110,6 @@ Convert the integer 123 into a String.
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -127,6 +124,8 @@ fn main() {
     let number: u8 = input_number.trim().parse().expect("Data converting error!");
     println!("Converted value = {}", number);
 }
+```
+</details>
 
 // Use the .to_string() method or String::from() to create a new String by concatenating a &str and an existing String.
 
@@ -136,9 +135,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -156,6 +152,8 @@ fn main() {
     //
     println!("\n{}", text_01.to_string() + &text_02);
 }
+```
+</details>
 
 // Create a mutable String and append a &str to it using the push_str() method.
 
@@ -165,15 +163,14 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let mut mutable_string: String = String::from("Hello, ");
     mutable_string.push_str("word!");
     println!("{}", mutable_string);
 }
+```
+</details>
 
 // Add a single character (char) to the end of a mutable String.
 
@@ -183,9 +180,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let mut single_char: String = String::from("Hello, word");
@@ -193,6 +187,8 @@ fn main() {
     single_char.push(character);
     println!("{}", single_char);
 }
+```
+</details>
 
 // Combine a &str, a String, and a number into a new String using the format! macro.
 
@@ -202,9 +198,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let var_str: &str = "1";
@@ -215,6 +208,9 @@ fn main() {
     let result = format!("{}{}{}", var_str, var_string, var_u8);
     println!("{}", result);
 }
+```
+
+</details>
 
 // Create a new String by removing all whitespace from a string.
 
@@ -224,9 +220,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -239,6 +232,8 @@ fn main() {
     let remove_wspace = input_text.replace(" ", "");
     println!("\nFirst Letter = {}", remove_wspace.trim());
 }
+```
+</details>
 
 // Replace all occurrences of the substring "error" with "success" in a &str, creating a new String.
 
