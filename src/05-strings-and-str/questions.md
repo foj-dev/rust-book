@@ -243,9 +243,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -258,6 +255,8 @@ fn main() {
     let new_text = input_text.replace("error", "success");
     println!("\nFirst Letter = {}", new_text.trim());
 }
+```
+</details>
 
 // Replace only the first occurrence of "old" with "new" in a &str, creating a new String.
 
@@ -267,9 +266,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -282,6 +278,8 @@ fn main() {
     let phrase = input_phrase.replacen("old", "new", 1);
     println!("{}", phrase.trim());
 }
+```
+</details>
 
 // Check if a &str contains the substring "Rust".
 
@@ -291,9 +289,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -309,6 +304,8 @@ fn main() {
         println!("\n'{}' does not contain 'Rust'", input_text.trim());
     }
 }
+```
+</details>
 
 // Check if a filename in a string ends with the suffix .rs.
 
@@ -318,9 +315,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -336,6 +330,9 @@ fn main() {
         println!("\n'{}' does not ends with '.rs'", input_text.trim());
     }
 }
+```
+
+</details>
 
 // Check if a &str starts with the prefix "https://".
 
@@ -345,9 +342,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -363,6 +357,9 @@ fn main() {
         println!("\n'{}' does not start with 'https://'", input_text.trim());
     }
 }
+```
+
+</details>
 
 // Create code that takes a String and returns a slice containing only the first word. Assume that words are separated by spaces.
 
@@ -372,9 +369,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -387,6 +381,8 @@ fn main() {
     let phrase = input_phrase.split_whitespace().next();
     println!("{}", phrase.unwrap());
 }
+```
+</details>
 
 // Find the starting byte index of the first occurrence of the substring "world".
 
@@ -396,9 +392,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -414,6 +407,8 @@ fn main() {
         println!("\nNo word: world");
     }
 }
+```
+</details>
 
 // Write a function that accepts a String and returns its first character as a char.
 
@@ -423,9 +418,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -454,6 +446,8 @@ fn main() {
     let first_letter: char = input_word.trim_start().chars().next().unwrap_or(' ');
     println!("First Letter = {}", first_letter);
 }
+```
+</details>
 
 // Write a code that counts the number of characters (char) in a &str, not the number of bytes.
 
@@ -463,9 +457,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -485,6 +476,8 @@ fn main() {
 
     println!("{}", count);
 }
+```
+</details>
 
 // Write a code that counts the number of characters (char) in a sentence, excluding whitespace.
 
@@ -494,9 +487,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -516,6 +506,8 @@ fn main() {
 
     println!("{}", count);
 }
+```
+</details>
 
 // Write a code that takes a &mut String and replaces all lowercase 'a' characters with uppercase 'A's, modifying the original String.
 
@@ -525,9 +517,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -555,6 +544,8 @@ fn main() {
     }
     println!("{}", phrase);
 }
+```
+</details>
 
 // Write code that removes the last character from a String.
 
@@ -564,9 +555,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 use std::io;
 
 fn main() {
@@ -607,6 +595,8 @@ fn main() {
     }
     println!("{}", character);
 }
+```
+</details>
 
 // Use the .clear() method to empty a String without deallocating its memory capacity.
 
@@ -616,9 +606,6 @@ fn main() {
 <summary>Answers</summary>
 
 ```rust
-```
-</details>
-
 fn main() {
     //
     let mut var_string: String = String::with_capacity(50);
@@ -635,3 +622,5 @@ fn main() {
     println!("String = {}", var_string);
     println!("Capacity = {}", var_string.capacity());
     println!("Len = {}", var_string.len());
+```
+</details>

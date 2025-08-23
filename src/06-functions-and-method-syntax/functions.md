@@ -24,9 +24,7 @@ fn main() {
     // parameter
     parameter(1);
 }
-```
 
-```rust
 fn parameter_00(x: i8, y: i8) {
     // 00
     println!("{} + {} = {}", x, y, x + y);

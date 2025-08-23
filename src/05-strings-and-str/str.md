@@ -34,7 +34,8 @@ println!("{}", create_str_02);
 println!("{}", create_str_03);
 println!("{}", create_str_04);
 ```
-## Str Concatenation
+
+## Str concatenation
 
 ```rust
 let create_str_01 = "Create";
