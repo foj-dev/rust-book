@@ -1,5 +1,11 @@
 [book]
-authors = ["foj"]
+authors = ["foj-dev"]
 language = "en"
 src = "src"
-title = "Rust Book!"
+
+[output.html]
+additional-css = ["./theme/catppuccin.css","./theme/catppuccin-alerts.css"]
+default-theme = "latte"
+preferred-dark-theme = "mocha"
+
+[preprocessor.alerts]

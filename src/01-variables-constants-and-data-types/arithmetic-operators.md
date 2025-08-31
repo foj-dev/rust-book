@@ -19,6 +19,14 @@ fn main () {
 }
 ```
 
+>💡
+>
+> Use the constant associated with the type:
+> ```rust
+> println!("u8: Min = {} | Max = {}", std::u8::MIN, std::u8::MAX);
+> println!("Usize: Min = {} | Max = {}", std::usize::MIN, std::usize::MAX);
+> ```
+
 ## Precede ordination
 
 Some operators have priority over others
