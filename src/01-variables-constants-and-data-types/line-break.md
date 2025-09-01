@@ -18,8 +18,3 @@ println!("My name is Rodolfo!");
 println!("What is your name?\nMy name is Rodolfo!");
 ```
 
-`\\n`
-```rust
-// it allows the visualization of (\n)
-println!("What is your name?\\nMy name is Rodolfo!");
-```
