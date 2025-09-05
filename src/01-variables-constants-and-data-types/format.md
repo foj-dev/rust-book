@@ -21,5 +21,4 @@ let text = format!("Hi, I'm {}, {} years old", name, years);
 println!("{}", text);
 ```
 
-> [!TIP]
 > **For more information, see the [Rust std::fmt documentation](https://doc.rust-lang.org/std/fmt/).**
